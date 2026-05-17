@@ -15,17 +15,29 @@ client.on('messageCreate', async (message) => {
     // Ignore bots
     if (message.author.bot) return;
 
-    // Only run in trading channel
+    // Only send in trading channel
     if (message.channel.id === TRADING_CHANNEL_ID) {
 
         message.channel.send({
             embeds: [{
-                title: '⚠️ Trading Chat Only',
-                description:
-                    '🚫 Keep chat out of trading.\nUse DMs or general for conversations.',
                 color: 0xED4245,
+
+                author: {
+                    name: 'Trading Guidelines',
+                    iconURL: 'https://i.imgur.com/8Km9tLL.png'
+                },
+
+                title: '⚠️ Trading Chat Only',
+
+                description:
+`Please keep this channel strictly for trading posts.
+
+• Use DMs for negotiations
+• Use general chat for conversations
+• Keep trading clean and organized`,
+
                 thumbnail: {
-                    url: client.user.displayAvatarURL()
+                    url: 'https://i.imgur.com/8Km9tLL.png'
                 }
             }]
         });
