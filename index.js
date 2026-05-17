@@ -24,13 +24,16 @@ client.on('messageCreate', async (message) => {
 
                 title: 'Trading Chat Only',
 
-                description:
+description:
 `Please keep this channel strictly for trading posts.
 
-• No Spamming
+• No spamming
+
 • Use DMs for negotiations
-• Keep trading clean and organized
-• Use general chat for conversations`
+
+• Use general chat for conversations
+
+• Keep trading clean and organized`
             }]
         });
 
