@@ -11,22 +11,22 @@ const client = new Client({
 const TRADING_CHANNEL_ID = '1395197351664029856';
 
 client.on('messageCreate', async (message) => {
+
+    // Ignore bots
     if (message.author.bot) return;
 
+    // Only run in trading channel
     if (message.channel.id === TRADING_CHANNEL_ID) {
 
         message.channel.send({
             embeds: [{
                 title: '⚠️ Trading Chat Only',
                 description:
-                    'Keep chat out of trading please — use DMs or general.',
+                    '🚫 Keep chat out of trading.\nUse DMs or general for conversations.',
                 color: 0xED4245,
-
-                footer: {
-                    text: 'Delay Services'
-                },
-
-                timestamp: new Date()
+                thumbnail: {
+                    url: client.user.displayAvatarURL()
+                }
             }]
         });
 
