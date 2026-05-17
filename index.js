@@ -14,7 +14,14 @@ client.on('messageCreate', async (message) => {
     if (message.author.bot) return;
 
     if (message.channel.id === TRADING_CHANNEL_ID) {
-        description: ' Keep chat out of trading please — use DMs or general.'
+
+        message.channel.send({
+            embeds: [{
+                description: ' Keep chat out of trading please — use DMs or general.',
+                color: 0x2F3136
+            }]
+        });
+
     }
 });
 
