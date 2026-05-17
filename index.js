@@ -22,14 +22,15 @@ client.on('messageCreate', async (message) => {
             embeds: [{
                 color: 0xED4245,
 
-                title: '⚠️ Trading Chat Only',
+                title: ':alert: Trading Chat Only',
 
                 description:
 `Please keep this channel strictly for trading posts.
 
-• Use DMs for negotiations
-• Use general chat for conversations
-• Keep trading clean and organized`
+• :screenshot:: No Spamming
+• :emojigg_DM: Use DMs for negotiations
+• :chat_icon: Use general chat for conversations
+• :ClubPenguinMop: Keep trading clean and organized`
             }]
         });
 
