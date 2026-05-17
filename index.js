@@ -27,10 +27,10 @@ client.on('messageCreate', async (message) => {
                 description:
 `Please keep this channel strictly for trading posts.
 
-• :screenshot:: No Spamming
-• :emojigg_DM: Use DMs for negotiations
-• :chat_icon: Use general chat for conversations
-• :ClubPenguinMop: Keep trading clean and organized`
+• No Spamming
+• Use DMs for negotiations
+• Use general chat for conversations
+• Keep trading clean and organized`
             }]
         });
 
