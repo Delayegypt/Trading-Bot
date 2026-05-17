@@ -29,8 +29,8 @@ client.on('messageCreate', async (message) => {
 
 • No Spamming
 • Use DMs for negotiations
-• Use general chat for conversations
-• Keep trading clean and organized`
+• Keep trading clean and organized
+• Use general chat for conversations`
             }]
         });
 
