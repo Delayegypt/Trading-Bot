@@ -16,17 +16,21 @@ client.on('messageCreate', async (message) => {
     if (message.channel.id === TRADING_CHANNEL_ID) {
 
         message.channel.send({
-    embeds: [{
-        title: '⚠️ Trading Chat Only',
-        description: 'Keep chat out of trading please — use DMs or general.',
-        color: 0xED4245,
+            embeds: [{
+                title: '⚠️ Trading Chat Only',
+                description:
+                    'Keep chat out of trading please — use DMs or general.',
+                color: 0xED4245,
 
-        footer: {
-            text: 'Delay Services'
-        },
+                footer: {
+                    text: 'Delay Services'
+                },
 
-        timestamp: new Date()
-    }]
+                timestamp: new Date()
+            }]
+        });
+
+    }
 });
 
 client.login(process.env.TOKEN);
