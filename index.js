@@ -10,6 +10,8 @@ const client = new Client({
 
 const TRADING_CHANNEL_ID = '1395197351664029856';
 
+let lastWarningMessage = null;
+
 client.on('messageCreate', async (message) => {
 
     // Ignore bots
@@ -18,13 +20,21 @@ client.on('messageCreate', async (message) => {
     // Only run in trading channel
     if (message.channel.id === TRADING_CHANNEL_ID) {
 
-        message.channel.send({
+        // Delete old warning message
+        if (lastWarningMessage) {
+            try {
+                await lastWarningMessage.delete();
+            } catch (err) {}
+        }
+
+        // Send new warning message
+        lastWarningMessage = await message.channel.send({
             embeds: [{
                 color: 0x2B2D31,
 
-                title: '**Trading Chat Only**',
+                title: '<:alert:1505432997308928051> Trading Chat Only',
 
-description:
+                description:
 `Please keep this channel strictly for trading posts.
 
 • **No spamming**
