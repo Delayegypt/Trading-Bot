@@ -32,7 +32,7 @@ client.on('messageCreate', async (message) => {
             embeds: [{
                 color: 0x2B2D31,
 
-                title: '<:alert:1505432997308928051> Trading Chat Only',
+                title: 'Trading Chat Only',
 
                 description:
 `Please keep this channel strictly for trading posts.
